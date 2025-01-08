@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Results</title>
+    <link rel="stylesheet" href="result.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color:hsl(187, 100%, 50%);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: black;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        /* Logo Styling */
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;  /* Add padding to give it a button-like shape */
+            border-radius: 5px;  /* Add rounded corners */
+            background-color:hsl(187, 100%, 50%);
+            transition: all 0.3s ease;  /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect for the logo */
+        .logo:hover {
+            background-color: black;  /* Change background color on hover */
+            color: white;  /* Make sure the text color stays white */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Add a shadow on hover */
+        }
+
+        .result h1, .result h2 {
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Back to Home</a> <!-- Back to Home with updated styling -->
+    </header>
+
+    <section class="result">
+        <h1>Model Training Results</h1>
+        
+        <h2>Classification Report:</h2>
+        
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-Score</th>
+                <th>Support</th>
+            </tr>
+            
+            <!-- Split the report text into lines and display -->
+            {% for line in report.splitlines() %}
+                {% if line and not line.startswith('micro') %}
+                    <tr>
+                        {% set metrics = line.split() %}
+                        <td>{{ metrics[0] }}</td>
+                        <td>{{ metrics[1] }}</td>
+                        <td>{{ metrics[2] }}</td>
+                        <td>{{ metrics[3] }}</td>
+                        <td>{{ metrics[4] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+
+        <div class="btn-group">
+            <a href="index.html" class="btn">Go Back to Home</a>
+            <a href="/upload" class="btn">Upload Another File</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Aditya Yewatikar. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

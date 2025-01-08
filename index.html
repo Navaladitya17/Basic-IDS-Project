@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic IDS Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">
+        Intrusion Detection<span>System</span>
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#upload">Upload</a>
+        <a href="/result" class="btn">View Results</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>
+          Hi, It's me <span>Aditya </span>
+        </h1>
+        <h3>
+          I'm a <span>Software Development engineer & Cyber security Analyst</span>
+        </h3>
+        <p>
+          Hi, I’m Aditya Sanjay Yewatikar, an IT graduate passionate about cyber security and software development engineering. 
+          Skilled in Java, Python, C, and C++, I’m looking for opportunities to apply my skills to innovative projects. Let’s connect!
+        </p>
+
+        <div class="social-icons">
+          <a href="https://github.com/Navaladitya17" target="_blank" rel="noopener noreferrer" >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/Aditya_Yewatikar" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://twitter.com/itx_adityaa_07" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/itx_ae_jun_07" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-instagram"></i>
+          </a>
+        </div>
+
+        <div class="btn-group">
+          <a href="#hire" class="btn">Hire</a>
+          <a href="#Contact" class="btn">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About <span>IDS</span></h2>
+        <p>
+          The Intrusion Detection System (IDS) project is designed to detect unauthorized access and potential threats in a network environment. This project aims to enhance network security by monitoring traffic, identifying anomalies, and alerting administrators in real time.         
+          <br><br>
+          Key features of the IDS include:
+          <ul>
+            <li>Continuous monitoring and traffic analysis to detect malicious activity.</li>
+            <li>Pattern matching and anomaly detection using advanced algorithms.</li>
+            <li>Integration with tools like Nmap and Wireshark for packet analysis.</li>
+            <li>Real-time alerts to inform administrators of suspicious activities.</li>
+            <li>This is a Basic IDS Project.</li>
+          </ul>
+        </p>
+        <a href="#" class="btn">Learn More</a>
+        <a href="https://github.com/Navaladitya17/Aditya-s-Resume/blob/a400315b52871caa91abf6b1dcf7d7767a24bbde/Resume%20(Aditya%20Yewatikar).pdf" class="btn">Download Resume</a>
+      </div>
+    </section>
+
+    <section class="upload" id="upload">
+      <h2 class="heading">Upload<span>here</span></h2>
+      <div class="upload-container">
+        <h2>Upload <span>CSV File</span></h2>
+        <p>Upload your CSV files for intrusion detection analysis. Ensure the files are in the correct format.</p>
+    
+        <!-- Form sending data to Flask '/upload' route -->
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+          <label for="file-upload" class="file-label">
+            <i class="bx bx-upload"></i> Choose File
+          </label>
+          <input type="file" id="file-upload" name="file" accept=".csv" class="file-input" required />
+    
+          <button type="submit" class="btn" id="upload-btn">Upload</button>
+        </form>
+    
+         
+      </div>
+    </section>
+    
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/Navaladitya17" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/Aditya_Yewatikar" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://twitter.com/itx_adityaa_07" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/itx_ae_jun_07" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-instagram"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © Cyberadi_07 | All rights Reserved
+      </p>
+    </footer>
+
+  </body>
+</html>
